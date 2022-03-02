@@ -16,6 +16,5 @@ int main(int argc, char *argv[])
     std::cout << "item\nwidth : " << item->getWidth() << "\nheight : " << item->getHeight() << "\nlength : " << item->getLength() << std::endl;
   }
 
-  delete product;
   return 0;
 }
