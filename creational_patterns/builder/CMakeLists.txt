@@ -10,8 +10,12 @@ add_library(${PROJECT_NAME}
   src/single_type_product_builder.cpp
 )
 
-add_executable(builder_test src/builder_test.cpp)
-add_dependencies(builder_test ${PROJECT_NAME})
-target_link_libraries(builder_test ${PROJECT_NAME})
+add_executable(builder_test1 src/builder_test1.cpp)
+add_dependencies(builder_test1 ${PROJECT_NAME})
+target_link_libraries(builder_test1 ${PROJECT_NAME})
 
+
+add_executable(builder_test2 src/builder_test2.cpp)
+add_dependencies(builder_test2 ${PROJECT_NAME})
+target_link_libraries(builder_test2 ${PROJECT_NAME})
 
