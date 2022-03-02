@@ -19,7 +19,7 @@ namespace builder
       return this;
     }
 
-    std::vector<Item *> getItems()
+    ItemArray getItems()
     {
       return items_;
     }
@@ -30,7 +30,7 @@ namespace builder
     }
 
   private:
-    std::vector<Item *> items_;
+    ItemArray items_;
     int type_;
   };
 } // namespace builder

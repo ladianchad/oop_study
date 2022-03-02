@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 
   product = product_builder->getProduct();
 
-  std::vector<builder::Item *> product_items = product->getItems();
+  builder::ItemArray product_items = product->getItems();
 
   for (builder::Item *item : product_items)
   {

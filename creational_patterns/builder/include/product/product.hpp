@@ -2,10 +2,10 @@
 #define BUILDER_PRODUCT_H_
 
 #include <product/item.hpp>
-#include <vector>
 
 namespace builder
 {
+
   class Product
   {
   public:
@@ -30,7 +30,7 @@ namespace builder
       type_ = type;
     }
 
-    std::vector<Item *> getItems()
+    ItemArray getItems()
     {
       return items_;
     }
@@ -42,7 +42,7 @@ namespace builder
 
   private:
     int type_;
-    std::vector<Item *> items_;
+    ItemArray items_;
   };
 } // namespace builder
 

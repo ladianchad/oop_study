@@ -1,5 +1,7 @@
 #ifndef BUILDER_ITEM_H_
 #define BUILDER_ITEM_H_
+#include <vector>
+
 namespace builder
 {
   class Item
@@ -41,5 +43,6 @@ namespace builder
     double length_;
   };
 
+  using ItemArray = std::vector<Item *>;
 }
 #endif
