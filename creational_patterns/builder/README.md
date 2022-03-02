@@ -1,6 +1,6 @@
 # Builder Pattern
 
-build
+Build & Run
 ```bash
 mkdir build && cd build
 cmake ..
