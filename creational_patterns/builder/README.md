@@ -5,5 +5,6 @@ Build & Run
 mkdir build && cd build
 cmake ..
 make
-./builder_test
+./builder_test1
+./builder_test2
 ```
