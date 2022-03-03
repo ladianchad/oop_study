@@ -4,16 +4,16 @@
 #include <vector>
 namespace builder
 {
-  class ProductWidhtBuilder
+  class ProductWithBuilder
   {
   public:
-    ProductWidhtBuilder *setType(int type)
+    ProductWithBuilder *setType(int type)
     {
       type_ = type;
       return this;
     }
 
-    ProductWidhtBuilder *addItem(Item *item)
+    ProductWithBuilder *addItem(Item *item)
     {
       items_.push_back(item);
       return this;
