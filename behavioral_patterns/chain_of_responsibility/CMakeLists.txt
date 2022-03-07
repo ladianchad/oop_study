@@ -12,8 +12,8 @@ add_library(${PROJECT_NAME}
   src/case_two_handler.cpp
 )
 
-add_executable(test src/test.cpp)
-add_dependencies(test ${PROJECT_NAME})
-target_link_libraries(test ${PROJECT_NAME})
+add_executable(run src/test.cpp)
+add_dependencies(run ${PROJECT_NAME})
+target_link_libraries(run ${PROJECT_NAME})
 
 
