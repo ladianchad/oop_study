@@ -9,19 +9,23 @@ int main(int argc, char const *argv[])
   handler->setNext(new CaseOneHandler())
       ->setNext(new CaseTwoHandler());
 
-  try
+  for (int i = 0; i < 5; i++)
   {
-    throw CustomError(1, "test error");
-  }
-  catch (const CustomError &e)
-  {
-    if (handler->support(e))
+    std::cout << "\n\n-------------test case " << i << "---------------" << std::endl;
+    try
     {
-      std::cout << "error handled" << std::endl;
+      throw CustomError(i, "test error");
     }
-    else
+    catch (const CustomError &e)
     {
-      std::cout << "all handler fail handle this error" << std::endl;
+      if (handler->support(e))
+      {
+        std::cout << "error handled" << std::endl;
+      }
+      else
+      {
+        std::cout << "all handler fail handle this error" << std::endl;
+      }
     }
   }
 
