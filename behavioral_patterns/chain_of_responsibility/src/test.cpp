@@ -14,13 +14,13 @@ int main(int argc, char const *argv[])
     std::cout << "\n\n-------------test case " << i << "---------------" << std::endl;
     try
     {
-      throw CustomError(i, "test error");
+      throw CustomError(i, "test");
     }
     catch (const CustomError &e)
     {
       if (handler->support(e))
       {
-        std::cout << "error handled" << std::endl;
+        std::cout << e.what() << " error handled" << std::endl;
       }
       else
       {

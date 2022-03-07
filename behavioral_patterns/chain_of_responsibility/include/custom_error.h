@@ -1,6 +1,7 @@
 #ifndef ERROR_H
 #define ERROR_H
 #include <stdexcept>
+
 class CustomError : public std::runtime_error
 {
 public:
