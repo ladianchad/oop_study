@@ -5,9 +5,8 @@
 int main(int argc, char const *argv[])
 {
 
-    Singlton<Sample> singleton;
-    Sample *instance1 = singleton.getInstance();
-    Sample *instance2 = singleton.getInstance();
+    Sample *instance1 = Singlton<Sample>::getInstance();
+    Sample *instance2 = Singlton<Sample>::getInstance();
 
     std::cout<<"instance 1 data : "<<instance1->getData()<<std::endl;
     std::cout<<"instance 2 data : "<<instance2->getData()<<std::endl;

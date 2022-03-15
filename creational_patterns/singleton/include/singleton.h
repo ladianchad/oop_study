@@ -5,17 +5,18 @@ template <class T>
 class Singlton
 {
 public:
-    Singlton() {
-        instance_ = new T();
-    };
-
-    T* getInstance(){
+    
+    static T* getInstance(){
         return instance_;
     }
 
 private:
-    T *instance_;
-
+    Singlton() {
+    };
+    static T *instance_;
 };
+
+template<class T>
+T* Singlton<T>::instance_ = new T();
 
 #endif
