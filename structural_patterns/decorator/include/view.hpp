@@ -5,7 +5,7 @@ class View
 {
 public:
     View() {};
-    virtual void execute(int a) {
+    void execute(int a) {
         std::cout<<"view : "<<a<<std::endl;
     };
 };
