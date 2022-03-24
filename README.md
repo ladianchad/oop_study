@@ -7,6 +7,7 @@
 - Structural Patterns
   - adapter
   - bridge
+  - decorator
   - facade
   - flyweight
   - proxy
