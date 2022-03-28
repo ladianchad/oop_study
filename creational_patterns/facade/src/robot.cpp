@@ -1,15 +1,11 @@
 #include <robot.h>
 #include <iostream>
 
-Robot::Robot() {}
-
-void Robot::setLidar(Lidar* lidar){
-  lidar_ = lidar;
+Robot::Robot() {
+  camera_ = new Camera();
+  lidar_ = new Lidar();
 }
 
-void Robot::setCamera(Camera* camera){
-  camera_ = camera;
-}
 
 Robot::Point Robot::calculateLidar(Lidar::Data data){
   std::cout<<"lidar operation..."<<std::endl;

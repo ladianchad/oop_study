@@ -13,8 +13,6 @@ public:
   };
   
   Robot();
-  void setLidar(Lidar* lidar);
-  void setCamera(Camera* camera);
   Point getPosition();
 
 private:
