@@ -10,19 +10,19 @@
 class ShapeFactory
 {
 public:
-  enum ShapeType{
+  enum Type{
     CIRCLE,
     LINE
   };
   ShapeFactory();
 
-  Shape* getShape(ShapeType type);
+  Shape* getShape(Type type);
 
-  void createType(ShapeType &type);
+  void createType(Type &type);
 
 private:
   static std::mutex mutex_;
-  static std::map<ShapeType,Shape*> shapes_;
+  static std::map<Type,Shape*> shapes_;
 };
 
 ShapeFactory::ShapeFactory(/* args */)
@@ -31,7 +31,7 @@ ShapeFactory::ShapeFactory(/* args */)
 }
 
 Shape*
-ShapeFactory::getShape(ShapeType type)
+ShapeFactory::getShape(Type type)
 {
   if(!shapes_[type]){
     createType(type); 
@@ -40,16 +40,16 @@ ShapeFactory::getShape(ShapeType type)
 }
 
 void
-ShapeFactory::createType(ShapeType &type)
+ShapeFactory::createType(Type &type)
 {
   std::lock_guard<std::mutex> unique_lock(mutex_);
-  if(type == ShapeType::CIRCLE){
+  if(type == Type::CIRCLE){
     shapes_[type] = new Circle();
-  } else if(type == ShapeType::LINE){
+  } else if(type == Type::LINE){
     shapes_[type] = new Line();
   }
 }
 
 std::mutex ShapeFactory::mutex_;
-std::map<ShapeFactory::ShapeType,Shape*> ShapeFactory::shapes_;
+std::map<ShapeFactory::Type,Shape*> ShapeFactory::shapes_;
 #endif
