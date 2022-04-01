@@ -15,5 +15,3 @@ add_library(${PROJECT_NAME}
 add_executable(run src/main.cpp)
 add_dependencies(run ${PROJECT_NAME})
 target_link_libraries(run ${PROJECT_NAME})
-
-
